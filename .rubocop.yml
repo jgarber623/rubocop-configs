@@ -1,0 +1,32 @@
+# https://github.com/rubocop/rubocop/blob/master/config/default.yml
+AllCops:
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  NewCops: enable
+
+Layout/ClassStructure:
+  Enabled: true
+
+Naming/InclusiveLanguage:
+  Enabled: true
+
+Style/AutoResourceCleanup:
+  Enabled: true
+
+Style/ClassMethodsDefinitions:
+  Enabled: true
+
+Style/ImplicitRuntimeError:
+  Enabled: true
+
+Style/MultilineMethodSignature:
+  Enabled: true
+
+Style/OptionHash:
+  Enabled: true
+
+Style/ReturnNil:
+  Enabled: true
+
+Style/UnlessLogicalOperators:
+  Enabled: true
