@@ -27,8 +27,6 @@ Style/ClassMethodsDefinitions:
 
 # Checks for raise or fail statements which do not specify an explicit exception
 # class.
-#
-# https://docs.rubocop.org/rubocop/1.24/cops_style.html#styleimplicitruntimeerror
 Style/ImplicitRuntimeError:
   Enabled: true
 
