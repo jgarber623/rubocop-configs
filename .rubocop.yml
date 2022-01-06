@@ -1,32 +1,51 @@
+# RuboCop's default configuration:
+#
 # https://github.com/rubocop/rubocop/blob/master/config/default.yml
+
 AllCops:
   DisplayStyleGuide: true
   ExtraDetails: true
   NewCops: enable
 
+# Checks if the code style follows the ExpectedOrder configuration.
 Layout/ClassStructure:
   Enabled: true
 
+# Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
   Enabled: true
 
+# Checks for cases when you could use a block accepting version of a method that
+# does automatic resource cleanup.
 Style/AutoResourceCleanup:
   Enabled: true
 
+# Enforces using `def self.method_name` or `class << self` to define class
+# methods.
 Style/ClassMethodsDefinitions:
   Enabled: true
 
+# Checks for raise or fail statements which do not specify an explicit exception
+# class.
+#
+# https://docs.rubocop.org/rubocop/1.24/cops_style.html#styleimplicitruntimeerror
 Style/ImplicitRuntimeError:
   Enabled: true
 
+# Checks for method signatures that span multiple lines.
 Style/MultilineMethodSignature:
   Enabled: true
 
+# Checks for options hashes and discourages them if the current Ruby version
+# supports keyword arguments.
 Style/OptionHash:
   Enabled: true
 
+# Enforces consistency between `return nil` and `return`.
 Style/ReturnNil:
   Enabled: true
 
+# Checks for the use of logical operators in an unless condition. It discourages
+# such code, as the condition becomes more difficult to read and understand.
 Style/UnlessLogicalOperators:
   Enabled: true
