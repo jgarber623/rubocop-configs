@@ -1,0 +1,21 @@
+inherit_from:
+  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
+# Identifies places where inefficient `readlines` method can be replaced by
+# `each_line` to avoid fully loading file content into memory.
+Performance/IoReadlines:
+  Enabled: true
+
+# Identifies places where select.map can be replaced by filter_map.
+# Requires Ruby 2.7
+Performance/SelectMap:
+  Enabled: true
+
+# Avoid opening modules and defining specs within them.
+RSpec/DescribedClassModuleWrapping:
+  Enabled: true
