@@ -57,6 +57,10 @@ Style/OptionHash:
 Style/ReturnNil:
   Enabled: true
 
+# Checks for symbol arrays using the %i() syntax.
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
 # Checks for the use of logical operators in an unless condition. It discourages
 # such code, as the condition becomes more difficult to read and understand.
 Style/UnlessLogicalOperators:
