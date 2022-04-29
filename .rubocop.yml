@@ -11,6 +11,16 @@ AllCops:
 Layout/ClassStructure:
   Enabled: true
 
+# Checks if the length of a block exceeds some maximum value.
+Metrics/BlockLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+  IgnoredMethods:
+    - context
+    - describe
+
 # Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
   Enabled: true
