@@ -20,3 +20,10 @@ Performance/SelectMap:
 # Avoid opening modules and defining specs within them.
 RSpec/DescribedClassModuleWrapping:
   Enabled: true
+
+# Checks for long examples.
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
