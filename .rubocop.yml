@@ -17,9 +17,6 @@ Metrics/BlockLength:
     - array
     - hash
     - heredoc
-  IgnoredMethods:
-    - context
-    - describe
 
 # Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
