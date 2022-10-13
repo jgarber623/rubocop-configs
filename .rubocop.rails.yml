@@ -7,6 +7,10 @@ require:
   - rubocop-rake
   - rubocop-rspec
 
+# Identifies usages of `array.compact.flatten.map { |x| x.downcase }`.
+Performance/ChainArrayAllocation:
+  Enabled: true
+
 # Identifies places where inefficient `readlines` method can be replaced by
 # `each_line` to avoid fully loading file content into memory.
 Performance/IoReadlines:
@@ -21,12 +25,22 @@ Performance/SelectMap:
 Rails/DefaultScope:
   Enabled: true
 
+# Looks for direct access to environment variables through the `ENV` variable
+# within the application code.
+Rails/EnvironmentVariableAccess:
+  Enabled: true
+  AllowReads: true
+
 # Checks for places where ordering by `id` column is used.
 Rails/OrderById:
   Enabled: true
 
 # Enforces the use of `ids` over `pluck(:id)` and `pluck(primary_key)`.
 Rails/PluckId:
+  Enabled: true
+
+# Checks for the usage of `require_dependency`.
+Rails/RequireDependency:
   Enabled: true
 
 # Checks whether the migration implements either a `change` method or both an
@@ -39,6 +53,7 @@ Rails/ReversibleMigrationMethodDefinition:
 # exception is better than unhandled failure.
 Rails/SaveBang:
   Enabled: true
+  AllowImplicitReturn: false
 
 # Enforces the use of the comment option when adding a new table or column to
 # the database during a migration.
