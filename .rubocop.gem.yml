@@ -7,10 +7,6 @@ require:
   - rubocop-rake
   - rubocop-rspec
 
-# Identifies usages of `array.compact.flatten.map { |x| x.downcase }`.
-Performance/ChainArrayAllocation:
-  Enabled: true
-
 # Identifies places where inefficient `readlines` method can be replaced by
 # `each_line` to avoid fully loading file content into memory.
 Performance/IoReadlines:
