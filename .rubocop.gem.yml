@@ -12,6 +12,11 @@ require:
 Performance/IoReadlines:
   Enabled: true
 
+# Identifies use of methods that generate a new intermediate array that is
+# promptly thrown away.
+Performance/ChainArrayAllocation:
+  Enabled: true
+
 # Identifies places where `select.map` can be replaced by `filter_map`.
 # Requires Ruby 2.7
 Performance/SelectMap:
