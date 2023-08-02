@@ -11,6 +11,15 @@ AllCops:
 Layout/ClassStructure:
   Enabled: true
 
+# Ensures that each key in a multi-line hash starts on a separate line.
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+# Checks for the ordering of a method call where the receiver of the call is a
+# HEREDOC.
+Lint/HeredocMethodCallPosition:
+  Enabled: true
+
 # Checks if the length of a block exceeds some maximum value.
 Metrics/BlockLength:
   CountAsOne:
@@ -35,6 +44,15 @@ Style/AutoResourceCleanup:
 Style/ClassMethodsDefinitions:
   Enabled: true
 
+# Checks that constants defined in classes and modules have an explicit
+# visibility declaration.
+Style/ConstantVisibility:
+  Enabled: true
+
+# Checks for consistent usage of the `DateTime` class over the `Time` class.
+Style/DateTime:
+  Enabled: true
+
 # Checks for missing top-level documentation of classes and modules.
 Style/Documentation:
   Enabled: false
@@ -42,6 +60,10 @@ Style/Documentation:
 # Checks for raise or fail statements which do not specify an explicit exception
 # class.
 Style/ImplicitRuntimeError:
+  Enabled: true
+
+# Checks for hardcoded IP addresses, which can make code brittle.
+Style/IpAddresses:
   Enabled: true
 
 # Checks for method signatures that span multiple lines.
@@ -53,11 +75,23 @@ Style/MultilineMethodSignature:
 Style/OptionHash:
   Enabled: true
 
+# Sort `require` and `require_relative` in alphabetical order.
+Style/RequireOrder:
+  Enabled: true
+
 # Enforces consistency between `return nil` and `return`.
 Style/ReturnNil:
   Enabled: true
 
-# Checks for symbol arrays using the %i() syntax.
+# Checks for the use of the `send` method.
+Style/Send:
+  Enabled: true
+
+# Enforces the use of consistent method names from the String class.
+Style/StringMethods:
+  Enabled: true
+
+# Checks for symbol arrays using the `%i()` syntax.
 Style/SymbolArray:
   EnforcedStyle: brackets
 
