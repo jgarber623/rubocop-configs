@@ -26,7 +26,7 @@ inherit_from:
 # Any custom RuboCop configuration
 ```
 
-For a Ruby on Rails project:
+For a [Ruby on Rails](https://rubyonrails.org) project:
 
 ```yaml
 # Your project's .rubocop.yml
@@ -37,9 +37,20 @@ inherit_from:
 # Any custom RuboCop configuration
 ```
 
+For a [Roda](http://roda.jeremyevans.net) project:
+
+```yaml
+# Your project's .rubocop.yml
+
+inherit_from:
+  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.roda.yml
+
+# Any custom RuboCop configuration
+```
+
 ## Additional Dependencies
 
-Note that both the `.rubocop.gem.yml` and `.rubocop.rails.yml` configurations include additional gem dependencies via the `require` directive:
+Note that both the `.rubocop.gem.yml`, `.rubocop.rails.yml`, and `rubocop.roda.yml` configurations include additional gem dependencies via the `require` directive:
 
 - [rubocop-packaging](https://rubygems.org/gems/rubocop-packaging) (`.rubocop.gem.yml` only)
 - [rubocop-performance](https://rubygems.org/gems/rubocop-performance)
