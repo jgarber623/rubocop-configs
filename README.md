@@ -1,61 +1,44 @@
 # rubocop-configs
 
-A collection of [RuboCop](https://rubocop.org) configuration files for inclusion in other Ruby-based projects.
+A collection of reusable [RuboCop](https://rubocop.org) configuration files for inclusion in other Ruby projects.
 
 ## Usage
 
-For standard Ruby projects:
+Add the following to your project's `Gemfile` and run `bundle install`:
 
-```yaml
-# Your project's .rubocop.yml
-
-inherit_from:
-  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.yml
-
-# Any custom RuboCop configuration
+```ruby
+gem "rubocop"
+gem "rubocop-performance"
+gem "rubocop-rails"
+gem "rubocop-rake"
+gem "rubocop-rspec"
 ```
 
-For a Ruby gem project:
+Add the following to your project's `.rubocop.yml`:
 
 ```yaml
-# Your project's .rubocop.yml
-
 inherit_from:
-  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.gem.yml
-
-# Any custom RuboCop configuration
+  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop.yml
+  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop-rails.yml
+  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop-rspec.yml
 ```
 
-For a [Ruby on Rails](https://rubyonrails.org) project:
+## Dependencies
 
-```yaml
-# Your project's .rubocop.yml
+As noted above, the configurations in this project require one or more of the following RuboCop extensions:
 
-inherit_from:
-  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.rails.yml
-
-# Any custom RuboCop configuration
-```
-
-For a [Roda](http://roda.jeremyevans.net) project:
-
-```yaml
-# Your project's .rubocop.yml
-
-inherit_from:
-  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.roda.yml
-
-# Any custom RuboCop configuration
-```
-
-## Additional Dependencies
-
-Note that both the `.rubocop.gem.yml`, `.rubocop.rails.yml`, and `rubocop.roda.yml` configurations include additional gem dependencies via the `require` directive:
-
-- [rubocop-packaging](https://rubygems.org/gems/rubocop-packaging) (`.rubocop.gem.yml` only)
 - [rubocop-performance](https://rubygems.org/gems/rubocop-performance)
-- [rubocop-rails](https://rubygems.org/gems/rubocop-rails) (`.rubocop.rails.yml` only)
+- [rubocop-rails](https://rubygems.org/gems/rubocop-rails) (`.rubocop-rails.yml` only)
 - [rubocop-rake](https://rubygems.org/gems/rubocop-rake)
-- [rubocop-rspec](https://rubygems.org/gems/rubocop-rspec)
+- [rubocop-rspec](https://rubygems.org/gems/rubocop-rspec) (`.rubocop-rspec.yml` only)
 
-Be sure to add the above to your project's `Gemfile` or `.gemspec` as appropriate.
+[rubocop-packaging](https://rubygems.org/gems/rubocop-packaging) is also recommended but not required. When using this extension, add the following to your project's `.rubocop.yml`:
+
+```yaml
+require:
+  - rubocop-packaging
+```
+
+## License
+
+rubocop-configs is freely available under the MIT License. Use it, learn from it, fork it, improve it, change it, tailor it to your needs.

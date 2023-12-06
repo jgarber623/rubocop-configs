@@ -1,6 +1,6 @@
-# RuboCop's default configuration:
-#
-# https://github.com/rubocop/rubocop/blob/master/config/default.yml
+require:
+  - rubocop-performance
+  - rubocop-rake
 
 AllCops:
   DisplayStyleGuide: true
@@ -10,9 +10,51 @@ AllCops:
 # Checks if the code style follows the ExpectedOrder configuration.
 Layout/ClassStructure:
   Enabled: true
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - association
+    - public_attribute_macros
+    - public_delegate
+    - macros
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+
+# Enforces empty line after multiline condition.
+Layout/EmptyLineAfterMultilineCondition:
+  Enabled: true
+
+# Checks for the placement of the closing parenthesis in a method call that
+# passes a HEREDOC string as an argument.
+Layout/HeredocArgumentClosingParenthesis:
+  Enabled: true
+
+# Checks that each item in a multi-line array literal starts on a separate line.
+Layout/MultilineArrayLineBreaks:
+  Enabled: true
+
+# Check for a newline after the assignment operator in multi-line assignments.
+Layout/MultilineAssignmentLayout:
+  Enabled: true
 
 # Ensures that each key in a multi-line hash starts on a separate line.
 Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+# Checks that each argument in a multi-line method call starts on a separate
+# line.
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+# hecks that each parameter in a multi-line method definition starts on a
+# separate line.
+Layout/MultilineMethodParameterLineBreaks:
   Enabled: true
 
 # Checks for the ordering of a method call where the receiver of the call is a
@@ -34,6 +76,26 @@ Metrics/BlockLength:
 Naming/InclusiveLanguage:
   Enabled: true
 
+# Identifies use of methods that generate a new intermediate array that is
+# promptly thrown away.
+Performance/ChainArrayAllocation:
+  Enabled: true
+
+# Identifies places where inefficient `readlines` method can be replaced by
+# `each_line` to avoid fully loading file content into memory.
+Performance/IoReadlines:
+  Enabled: true
+
+# Identifies places where `select.map` can be replaced by `filter_map`.
+# Requires Ruby 2.7
+Performance/SelectMap:
+  Enabled: true
+
+# Use Array() instead of explicit Array check or [*var], when dealing with a
+# variable you want to treat as an Array, but you're not certain it's an array.
+Style/ArrayCoercion:
+  Enabled: true
+
 # Checks for cases when you could use a block accepting version of a method that
 # does automatic resource cleanup.
 Style/AutoResourceCleanup:
@@ -44,9 +106,8 @@ Style/AutoResourceCleanup:
 Style/ClassMethodsDefinitions:
   Enabled: true
 
-# Checks that constants defined in classes and modules have an explicit
-# visibility declaration.
-Style/ConstantVisibility:
+# Preferred collection methods.
+Style/CollectionMethods:
   Enabled: true
 
 # Checks for consistent usage of the `DateTime` class over the `Time` class.
@@ -62,12 +123,8 @@ Style/Documentation:
 Style/ImplicitRuntimeError:
   Enabled: true
 
-# Checks for hardcoded IP addresses, which can make code brittle.
-Style/IpAddresses:
-  Enabled: true
-
-# Checks for method signatures that span multiple lines.
-Style/MultilineMethodSignature:
+# Checks for methods called on a `do`...`​end` block.
+Style/MethodCalledOnDoEndBlock:
   Enabled: true
 
 # Checks for options hashes and discourages them if the current Ruby version
@@ -87,13 +144,17 @@ Style/ReturnNil:
 Style/Send:
   Enabled: true
 
+# Checks for places where classes with only class methods can be replaced with a
+# module.
+Style/StaticClass:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
 # Enforces the use of consistent method names from the String class.
 Style/StringMethods:
   Enabled: true
-
-# Checks for symbol arrays using the `%i()` syntax.
-Style/SymbolArray:
-  EnforcedStyle: brackets
 
 # Checks for the use of logical operators in an unless condition. It discourages
 # such code, as the condition becomes more difficult to read and understand.

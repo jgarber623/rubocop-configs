@@ -1,25 +1,5 @@
-inherit_from:
-  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.yml
-
 require:
-  - rubocop-performance
   - rubocop-rails
-  - rubocop-rake
-  - rubocop-rspec
-
-# Identifies usages of `array.compact.flatten.map { |x| x.downcase }`.
-Performance/ChainArrayAllocation:
-  Enabled: true
-
-# Identifies places where inefficient `readlines` method can be replaced by
-# `each_line` to avoid fully loading file content into memory.
-Performance/IoReadlines:
-  Enabled: true
-
-# Identifies places where select.map can be replaced by filter_map.
-# Requires Ruby 2.7
-Performance/SelectMap:
-  Enabled: true
 
 # Looks for uses of `default_scope`.
 Rails/DefaultScope:
@@ -60,13 +40,6 @@ Rails/SaveBang:
 Rails/SchemaComment:
   Enabled: true
 
-# Avoid opening modules and defining specs within them.
-RSpec/DescribedClassModuleWrapping:
+# Enforces the absence of explicit table name assignment.
+Rails/TableNameAssignment:
   Enabled: true
-
-# Checks for long examples.
-RSpec/ExampleLength:
-  CountAsOne:
-    - array
-    - hash
-    - heredoc

@@ -1,0 +1,18 @@
+require:
+  - rubocop-rspec
+
+# Avoid opening modules and defining specs within them.
+RSpec/DescribedClassModuleWrapping:
+  Enabled: true
+
+# Checks for long examples.
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
+# Checks for consistent message expectation style.
+RSpec/MessageExpectation:
+  Enabled: true
