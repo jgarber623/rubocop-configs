@@ -32,12 +32,14 @@ As noted above, the configurations in this project require one or more of the fo
 - [rubocop-rake](https://rubygems.org/gems/rubocop-rake)
 - [rubocop-rspec](https://rubygems.org/gems/rubocop-rspec) (`.rubocop-rspec.yml` only)
 
-[rubocop-packaging](https://rubygems.org/gems/rubocop-packaging) is also recommended but not required. When using this extension, add the following to your project's `.rubocop.yml`:
+The following RuboCop extensions are recommended for [Ruby on Rails](https://rubyonrails.org) projects:
 
-```yaml
-require:
-  - rubocop-packaging
-```
+- [rubocop-capybara](https://github.com/rubocop/rubocop-capybara)
+- [rubocop-factory_bot](https://github.com/rubocop/rubocop-factory_bot)
+
+The following RuboCop extension is recommended for [RubyGem](https://rubygems.org) projects:
+
+- [rubocop-packaging](https://rubygems.org/gems/rubocop-packaging)
 
 ## License
 
