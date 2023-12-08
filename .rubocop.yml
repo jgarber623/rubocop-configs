@@ -52,7 +52,12 @@ Layout/MultilineHashKeyLineBreaks:
 Layout/MultilineMethodArgumentLineBreaks:
   Enabled: true
 
-# hecks that each parameter in a multi-line method definition starts on a
+# Checks the indentation of the method name part in method calls that span more 
+# than one line.
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+# Checks that each parameter in a multi-line method definition starts on a
 # separate line.
 Layout/MultilineMethodParameterLineBreaks:
   Enabled: true
