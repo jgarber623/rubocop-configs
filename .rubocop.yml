@@ -154,6 +154,10 @@ Style/ImplicitRuntimeError:
 Style/MethodCalledOnDoEndBlock:
   Enabled: true
 
+# Checks for method signatures that span multiple lines.
+Style/MultilineMethodSignature:
+  Enabled: true
+
 # Checks for options hashes and discourages them if the current Ruby version
 # supports keyword arguments.
 Style/OptionHash:
