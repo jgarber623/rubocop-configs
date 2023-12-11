@@ -30,6 +30,11 @@ Layout/ClassStructure:
 Layout/EmptyLineAfterMultilineCondition:
   Enabled: true
 
+# Checks the indentation of the first key in a hash literal where the opening
+# brace and the first key are on separate lines.
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
 # Checks for the placement of the closing parenthesis in a method call that
 # passes a HEREDOC string as an argument.
 Layout/HeredocArgumentClosingParenthesis:
