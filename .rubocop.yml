@@ -73,9 +73,26 @@ Metrics/BlockLength:
     - array
     - hash
     - heredoc
+    - method_call
   AllowedMethods:
     - context
     - describe
+
+# Checks if the length a class exceeds some maximum value.
+Metrics/ClassLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
+# Checks if the length of a method exceeds some maximum value.
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
 
 # Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
