@@ -8,6 +8,7 @@ require:
   - rubocop-rake
 
 AllCops:
+  ActiveSupportExtensionsEnabled: true
   DisplayStyleGuide: true
   ExtraDetails: true
   NewCops: enable
