@@ -180,7 +180,13 @@ Style/Send:
 Style/StaticClass:
   Enabled: true
 
+# Checks if uses of quotes match the configured preference.
 Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Checks that quotes inside string, symbol, and regexp interpolations match the 
+# configured preference.
+Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 
 # Enforces the use of consistent method names from the String class.
