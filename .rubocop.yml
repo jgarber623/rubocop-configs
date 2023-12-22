@@ -193,6 +193,16 @@ Style/StringLiteralsInInterpolation:
 Style/StringMethods:
   Enabled: true
 
+# Checks for array literals made up of symbols that are not using the `%i()`
+# syntax.
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Checks for array literals made up of word-like strings, that are not using
+# the `%w()` syntax.
+Style/WordArray:
+  EnforcedStyle: brackets
+
 # Checks for the use of logical operators in an `unless` condition.
 Style/UnlessLogicalOperators:
   Enabled: true
