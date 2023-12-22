@@ -73,6 +73,11 @@ Layout/MultilineMethodCallIndentation:
 Layout/MultilineMethodParameterLineBreaks:
   Enabled: true
 
+# Checks the indentation of the right hand side operand in binary operations 
+# that span more than one line.
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 # Checks for the ordering of a method call where the receiver of the call is a
 # HEREDOC.
 Lint/HeredocMethodCallPosition:
