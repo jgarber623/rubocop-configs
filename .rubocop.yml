@@ -172,6 +172,14 @@ Style/DateTime:
 Style/Documentation:
   Enabled: false
 
+# Checks for the formatting of empty method definitions.
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+# Checks hash literal syntax.
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
 # Checks for methods called on a `do`...`​end` block.
 Style/MethodCalledOnDoEndBlock:
   Enabled: true
@@ -183,10 +191,6 @@ Style/MultilineMethodSignature:
 # Checks for options hashes and discourages them if the current Ruby version
 # supports keyword arguments.
 Style/OptionHash:
-  Enabled: true
-
-# Sort `require` and `require_relative` in alphabetical order.
-Style/RequireOrder:
   Enabled: true
 
 # Enforces consistency between `return nil` and `return`.
