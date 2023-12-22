@@ -122,6 +122,10 @@ Metrics/ModuleLength:
     - heredoc
     - method_call
 
+# Checks for methods with too many parameters.
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
 # Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
   Enabled: true
