@@ -104,6 +104,14 @@ Metrics/MethodLength:
     - heredoc
     - method_call
 
+# Checks if the length of a module exceeds some maximum value.
+Metrics/ModuleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
 # Recommends the use of inclusive language instead of problematic terms.
 Naming/InclusiveLanguage:
   Enabled: true
