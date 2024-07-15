@@ -18,9 +18,9 @@ Add the following to your project's `.rubocop.yml`:
 
 ```yaml
 inherit_from:
-  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop.yml
-  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop-rails.yml
-  - https://github.com/jgarber623/rubocop-configs/raw/main/.rubocop-rspec.yml
+  - https://jgarber623.github.io/rubocop-configs/.rubocop.yml
+  - https://jgarber623.github.io/rubocop-configs/.rubocop-rails.yml
+  - https://jgarber623.github.io/rubocop-configs/.rubocop-rspec.yml
 ```
 
 ## Dependencies
